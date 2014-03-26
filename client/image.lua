@@ -1,4 +1,4 @@
-function doit()
+function createimages()
 	boatunoccupied = Image.Create(AssetLocation.Game, "hud_icon_boat_yellow_dif.dds")
 	boatoccupied = Image.Create(AssetLocation.Game, "hud_icon_boat_orange_dif.dds")
 	boatdestroyed = Image.Create(AssetLocation.Game, "hud_icon_boat_red_dif.dds")
@@ -63,5 +63,4 @@ function delete()
 end
 
 Events:Subscribe("Render", tick)
-Events:Subscribe("ModuleLoad", doit)
---Events:Subscribe("ModuleUnload", delete) 174.99.89.97
+Events:Subscribe("ModuleLoad", createimages)
