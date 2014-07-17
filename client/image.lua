@@ -73,6 +73,8 @@ function drawVehicle(v)
 end
 
 function render()
+	if Game:GetState() ~= GUIState.Game then return end
+
 	for vehicle in Client:GetVehicles() do
 		drawVehicle(vehicle)
 	end
