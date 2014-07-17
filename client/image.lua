@@ -64,7 +64,7 @@ function drawVehicle(v)
 	if not IsValid(v) then return end
 
 	local pos, inRange = Render:WorldToMinimap(v:GetPosition())
-	-- Don't show an icon if its the v local player is driving
+	-- Don't show the vehicle if it's being driven by the local player
 	if inRange and v:GetDriver() ~= LocalPlayer then 
 		local typeImages = Images[getVehicleType(v)]
 		local image = typeImages[getVehicleState(v)]
